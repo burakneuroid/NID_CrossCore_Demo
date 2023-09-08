@@ -1,4 +1,4 @@
-# NID_CrossCore_Demo
+# NeuroID_NodeJS_Example
 
 Step 1 - Download the repo 
 
