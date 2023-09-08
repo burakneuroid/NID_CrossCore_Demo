@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experian Cross Core Sample HTML</title>
+    <title>NodeJS Sample HTML</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -64,7 +64,7 @@
             n.nid=n.nid||function(){(n.nid.q=n.nid.q||[]).push(arguments)};
             o=e.createElement(u);i=e.getElementsByTagName(u)[0];o.async=1;
             o.src=r;i.parentNode.insertBefore(o,i);
-        })(window,document,'script','https://scripts.neuro-id.com/c/nid-bulbs620-test.js');
+        })(window,document,'script','https://scripts.neuro-id.com/c/nid-{site_id}-test.js'); // Please update with your site id, should look like this https://scripts.neuro-id.com/c/nid-panda123-test.js
       
         nid('setDebug',true);
         nid('identify',myUuid); // Braulio - Please use this in your API call
@@ -82,7 +82,7 @@
 
 
     <div class="logo-container">
-        <img src="https://assets.experiancs.com/images/logo-experian.svg?hs=2c108564c86d0b65336076616b44b886" alt="Experian Logo">
+        <img src="https://mma.prnewswire.com/media/1920941/Neuro_ID_Logo.jpg?p=facebook" alt="Experian Logo">
     </div>
     <div class="form-container">
         <form action="/submit" method="post">
