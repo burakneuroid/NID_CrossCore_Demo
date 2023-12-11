@@ -61,11 +61,12 @@
 
           
         (function(n,e,u,r,o,i,d){
-            n.nid=n.nid||function(){(n.nid.q=n.nid.q||[]).push(arguments)};
-            o=e.createElement(u);i=e.getElementsByTagName(u)[0];o.async=1;
-            o.src=r;i.parentNode.insertBefore(o,i);
-        })(window,document,'script','https://scripts.neuro-id.com/c/nid-{site_id}-test.js'); // Please update with your site id, should look like this https://scripts.neuro-id.com/c/nid-panda123-test.js
-      
+        n.nid=n.nid||function(){(n.nid.q=n.nid.q||[]).push(arguments)};
+        o=e.createElement(u);i=e.getElementsByTagName(u)[0];o.async=1;
+        o.src=r;i.parentNode.insertBefore(o,i);
+    })(window,document,'script','//scripts.neuro-id.com/c/nid-posse441-test.js');
+
+          
         nid('setDebug',true);
         nid('identify',myUuid);
 
