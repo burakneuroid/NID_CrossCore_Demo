@@ -2,15 +2,22 @@
 
 Step 1 - Download the repo 
 
-Step 2 - Run "npm install"
+Step 2 - Run 
 
-Step 3 - Run "node server.js"
+"npm install"
+"npm install cors"
+"npm install memcached"
+"npm install http-proxy-middleware"
 
-Step 4 - Open "http://localhost:3000"
+Step 3 - Modify "site_id" in the index.html file
 
-Step 5 - Inteact with the form 
+Step 4 - Run "node server.js"
 
-Step 6 - Call NeuroID Analytics API with the credentials that you can on the form. 
+Step 5 - Open "http://localhost:3000"
+
+Step 6 - Inteact with the form and "Submit" the form
+
+Step 7 - Select "Call API" button to retrieve API response. 
 
 DISCLAIMER:We've prepared a basic sample app to help you to integrate NeuroID Javascript Library into your Node/Express JS app. Keep in mind, this guide is provided as a goodwill gesture and isn't included in our formal documentation or support. Both the guide and any related sample code are distributed under the MIT License.
 
