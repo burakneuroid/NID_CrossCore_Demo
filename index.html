@@ -125,6 +125,11 @@
         function submitForm(event) {
             event.preventDefault();
 
+            // Check if the form has already been submitted
+            if (formSubmitted) {
+                return;
+            }
+
             // Simulate form submission or perform actions here
             const formData = new FormData(document.getElementById('sampleForm'));
             console.log('Form data submitted:', Object.fromEntries(formData.entries()));
@@ -168,7 +173,8 @@
             .then(data => {
                 // Check if 'profile' and 'signals' are defined in the response
                 if (data.profile && data.profile.signals && data.profile.signals.length > 0) {
-                    // Extract labels for "familiarity," "fraud_ring_indicator," "automated_activity," and "risky_device"
+                    // Extract labels for "Combined Digital Intent","familiarity," "Fraud Ring Indicator," "Automated Activity," and "Risky Device"
+                    const combinedDigitalIntentLabel = data.profile.signals.find(signal => signal.model === 'combined_digital_intent')?.label;
                     const familiarityLabel = data.profile.signals.find(signal => signal.model === 'familiarity')?.label;
                     const fraudRingLabel = data.profile.signals.find(signal => signal.model === 'fraud_ring_indicator')?.label;
                     const automatedActivityLabel = data.profile.signals.find(signal => signal.model === 'automated_activity')?.label;
@@ -179,10 +185,16 @@
                         switch (label) {
                             case 'high':
                                 return 'green';
+                            case 'genuine':
+                                return 'green';
+                            case 'risky':
+                                return 'red';
                             case 'true':
                                 return 'red';
                             case 'low':
                                 return 'red';
+                            case 'neutral':
+                                return 'orange';
                             case 'medium':
                                 return 'orange';
                             default:
@@ -193,6 +205,12 @@
                     // Display the extracted labels with colors in separate boxes
                     const signalsContainer = document.getElementById('signalsContainer');
                     signalsContainer.innerHTML = ''; // Clear existing content
+
+                    // Display box for Combined Digital Intent
+                    const combinedDigitalIntentBox = document.createElement('div');
+                    combinedDigitalIntentBox.style.color = getColor(combinedDigitalIntentLabel);
+                    combinedDigitalIntentBox.innerHTML = `<strong>Combined Digital Intent:</strong> ${combinedDigitalIntentLabel}`;
+                    signalsContainer.appendChild(combinedDigitalIntentBox);
 
                     // Display box for Familiarity
                     const familiarityBox = document.createElement('div');
