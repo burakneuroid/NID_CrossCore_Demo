@@ -4,14 +4,14 @@ Step 1 - Download the repo
 
 Step 2 - Run 
 
-"npm install"
-"npm install cors"
-"npm install memcached"
-"npm install http-proxy-middleware"
+`npm install`
+`npm install cors`
+`npm install memcached`
+`npm install http-proxy-middleware`
 
-Step 3 - Modify "site_id" in the index.html file
+Step 3 - Update `site_id` and `API Key` in the index.html file
 
-Step 4 - Run "node server.js"
+Step 4 - Run `node server.js`
 
 Step 5 - Open "http://localhost:3000"
 
